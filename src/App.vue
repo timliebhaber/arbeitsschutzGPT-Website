@@ -1,26 +1,34 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <chat msg="Welcome to Your Vue.js App"/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import chat from './components/chat.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    chat
   }
 }
 </script>
 
 <style>
+/* Globale dunkle Hintergrundfarbe */
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  background-color: #121212;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #121212; /* Dunkler Hintergrund */
+  color: #e0e0e0; /* Helle Textfarbe */
+  font-family: Arial, sans-serif;
 }
 </style>
