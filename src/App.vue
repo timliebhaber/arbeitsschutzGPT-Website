@@ -1,14 +1,18 @@
 <template>
+   <PasswordProtected>
   <chat msg="Welcome to Your Vue.js App"/>
+   </PasswordProtected>
 </template>
 
 <script>
 import chat from './components/chat.vue'
+import PasswordProtected from './components/PasswordProtected.vue';
 
 export default {
   name: 'App',
   components: {
-    chat
+    chat,
+    PasswordProtected
   }
 }
 </script>
