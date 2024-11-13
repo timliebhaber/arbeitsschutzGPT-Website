@@ -44,6 +44,11 @@
   
   <style scoped>
   /* CSS Styles */
+  
+  h1 {
+  text-align: center;
+}
+
   .input-group {
     margin: 10px 0;
   }

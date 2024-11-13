@@ -17,6 +17,9 @@
       <button type="submit">Senden</button>
     </form>
   </div>
+  <div class="counter-container">
+      <p>Es wurden in dieser Session {{ counter }} Prompts ausgeführt.</p>
+    </div>
 </template>
 
 <script>
@@ -27,7 +30,8 @@ export default {
   data() {
     return {
       userInput: '',
-      messages: []
+      messages: [],
+      counter: 0
     };
   },
   methods: {
@@ -38,6 +42,9 @@ export default {
       // Füge die Benutzernachricht hinzu
       this.messages.push({ sender: 'user', text: message });
       this.userInput = '';
+      
+      //Counter für Variable
+      this.counter++;
 
       // Scrollt zum Ende des Chat-Fensters
       this.$nextTick(() => {
@@ -88,6 +95,13 @@ body {
   flex-direction: column;
   height: 600px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.counter-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px; /* Optional: kannst du anpassen, um die Höhe festzulegen */
 }
 
 .chat-header {
