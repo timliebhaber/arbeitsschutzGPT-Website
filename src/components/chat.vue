@@ -18,7 +18,7 @@
     </form>
   </div>
   <div class="counter-container">
-      <p>Es wurden in dieser Session {{ counter }} Prompts ausgeführt.</p>
+      <p>Ausgeführte Promts in dieser Session: {{ counter }}</p>
     </div>
 </template>
 
